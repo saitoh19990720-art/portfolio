@@ -1,38 +1,52 @@
 # portfolio
 
-しずくさんの母艦ポートフォリオLP（1枚もの）。
+しずくの母艦ポートフォリオ LP（1枚もの）。
 
-## 公開前に差し替えるプレースホルダー
+**公開先:** https://shizuku-portfolio.vercel.app
 
-`index.html` 内の以下を実URLに置換：
+## ファイル構成
 
-| プレースホルダー | 置換内容 |
+| ファイル | 役割 |
 |---|---|
-| `{{OSHI_LOG_URL}}` | oshi-log のVercel公開URL |
-| `{{OSHI_LOG_REPO}}` | oshi-log のGitHubリポジトリURL |
-| `{{CROWDWORKS_URL}}` | CrowdWorks プロフィールURL |
-| `{{LANCERS_URL}}` | Lancers プロフィールURL |
-| `{{GITHUB_URL}}` | GitHub プロフィールURL |
+| `index.html` | LP本体（`{{PLACEHOLDER}}` 形式） |
+| `style.css` | ダークテーマ・CSS変数トークン設計 |
+| `og.svg` | OG画像 |
+| `robots.txt` | クローラー設定 |
+| `sitemap.xml` | サイトマップ |
+| `.env.example` | 環境変数サンプル |
+| `replace-placeholders.sh` | `.env` → `dist/` 生成スクリプト |
 
-一括置換例（bash）:
-```bash
-sed -i 's|{{OSHI_LOG_URL}}|https://oshi-log.vercel.app|g' index.html
-```
-
-## ローカル確認
+## セットアップ
 
 ```bash
-# このディレクトリで
-npx serve .
+# 1. .env を作成
+cp .env.example .env
+# .env を編集して実URLを記入
+
+# 2. dist/ を生成
+bash replace-placeholders.sh
+
+# 3. ローカル確認
+npx serve dist
 ```
 
 ## デプロイ
 
-独立プロジェクトとしてVercelに出す場合は、この `portfolio/` を別リポジトリに切り出してconnectするのが一番シンプル。
+```bash
+# ~/work/deploy.sh で一発
+bash ~/work/deploy.sh
+```
 
-同一リポジトリで分けたい場合は、Vercelの「Root Directory」を `portfolio` に指定。
+内部でやること: `replace-placeholders.sh` → `vercel --prod` → `alias set shizuku-portfolio.vercel.app`
 
-## 構成
+## .env の変数
 
-- `index.html` — 1枚構成（Hero / 対応範囲 / 実績 / 進め方 / 連絡先）
-- `style.css` — oshi-log のダークトークンシステムを継承（`--accent-color` はくすみブルー系に調整）
+| 変数 | 値 |
+|---|---|
+| `PORTFOLIO_URL` | https://shizuku-portfolio.vercel.app |
+| `OSHI_LOG_URL` | https://oshi-log-shizuku.vercel.app |
+| `OSHI_LOG_REPO` | https://github.com/saitoh19990720-art/oshi-log |
+| `GITHUB_URL` | https://github.com/saitoh19990720-art |
+| `OG_IMAGE_URL` | https://shizuku-portfolio.vercel.app/og.svg |
+| `CROWDWORKS_URL` | https://crowdworks.jp/public/employees/saitoh19990720 |
+| `LANCERS_URL` | https://www.lancers.jp/profile/saitoh19990720 |
