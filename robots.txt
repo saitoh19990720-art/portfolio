@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shizuku-portfolio.vercel.app/sitemap.xml

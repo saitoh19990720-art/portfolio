@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0d13"/>
+      <stop offset="100%" style="stop-color:#06070b"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="15%" cy="20%" r="40%">
+      <stop offset="0%" style="stop-color:rgba(74,134,184,0.25)"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="15%" r="35%">
+      <stop offset="0%" style="stop-color:rgba(184,138,216,0.2)"/>
+      <stop offset="100%" style="stop-color:transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Border frame -->
+  <rect x="40" y="40" width="1120" height="550" rx="24" ry="24"
+    fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Kicker -->
+  <text x="80" y="160"
+    font-family="'Yu Gothic UI', 'Hiragino Sans', sans-serif"
+    font-size="18" letter-spacing="4" text-anchor="start"
+    fill="#8aa5d6" opacity="0.9">PORTFOLIO</text>
+
+  <!-- Name -->
+  <text x="80" y="260"
+    font-family="'Yu Gothic UI', 'Hiragino Sans', sans-serif"
+    font-size="96" font-weight="700" text-anchor="start"
+    fill="#f7f8fb">しずく</text>
+
+  <!-- Tagline -->
+  <text x="80" y="340"
+    font-family="'Yu Gothic UI', 'Hiragino Sans', sans-serif"
+    font-size="28" text-anchor="start"
+    fill="#98a1b5">UI設計 → 実装 → 軽い自動化まで一気通貫</text>
+
+  <!-- Tags -->
+  <g transform="translate(80, 400)">
+    <!-- Tag 1 -->
+    <rect width="130" height="40" rx="20" fill="rgba(138,165,214,0.15)" stroke="rgba(138,165,214,0.3)" stroke-width="1"/>
+    <text x="65" y="26" font-family="'Yu Gothic UI', sans-serif" font-size="15" text-anchor="middle" fill="#8aa5d6">LP / HTML / CSS</text>
+
+    <!-- Tag 2 -->
+    <rect x="145" width="88" height="40" rx="20" fill="rgba(138,165,214,0.15)" stroke="rgba(138,165,214,0.3)" stroke-width="1"/>
+    <text x="189" y="26" font-family="'Yu Gothic UI', sans-serif" font-size="15" text-anchor="middle" fill="#8aa5d6">Figma</text>
+
+    <!-- Tag 3 -->
+    <rect x="248" width="80" height="40" rx="20" fill="rgba(138,165,214,0.15)" stroke="rgba(138,165,214,0.3)" stroke-width="1"/>
+    <text x="288" y="26" font-family="'Yu Gothic UI', sans-serif" font-size="15" text-anchor="middle" fill="#8aa5d6">n8n</text>
+  </g>
+
+  <!-- URL -->
+  <text x="80" y="560"
+    font-family="'Yu Gothic UI', 'Hiragino Sans', sans-serif"
+    font-size="20" text-anchor="start"
+    fill="rgba(152,161,181,0.6)">shizuku-portfolio.vercel.app</text>
+</svg>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>しずく｜ポートフォリオ</title>
+  <meta name="description" content="フリーランスのUI設計・LPコーディング・Figma納品・軽い自動化までを一気通貫で。">
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="しずく｜ポートフォリオ">
+  <meta property="og:description" content="フリーランスのUI設計・LPコーディング・Figma納品・軽い自動化までを一気通貫で。">
+  <meta property="og:url" content="{{PORTFOLIO_URL}}">
+  <meta property="og:image" content="{{OG_IMAGE_URL}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="しずく｜ポートフォリオ">
+  <meta name="twitter:description" content="フリーランスのUI設計・LPコーディング・Figma納品・軽い自動化までを一気通貫で。">
+  <meta name="twitter:image" content="{{OG_IMAGE_URL}}">
+
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- JSON-LD 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "しずく",
+    "url": "{{PORTFOLIO_URL}}",
+    "image": "{{OG_IMAGE_URL}}",
+    "jobTitle": "フリーランス Webデザイナー・フロントエンドエンジニア",
+    "description": "UI設計・LPコーディング・Figma納品・バナー制作・軽い自動化まで一気通貫で対応するフリーランスです。",
+    "knowsAbout": ["Figma", "HTML", "CSS", "JavaScript", "LP制作", "バナー制作", "UI設計", "n8n"],
+    "sameAs": ["{{GITHUB_URL}}"]
+  }
+  </script>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="kicker">Portfolio</p>
+      <h1 class="hero-title">しずく</h1>
+      <p class="hero-copy">
+        UI設計 → プロトタイプ → 実装 → 軽い運用自動化を一気通貫で届けるフリーランスです。
+        LP・バナー・情報整理・Figma納品・改善案件まで対応しています。
+        「なぜそうしたか」を説明できる形で納品します。
+      </p>
+      <div class="hero-actions">
+        <a class="primary-button" href="#contact">仕事を依頼する</a>
+        <a class="ghost-button" href="#works">実績を見る</a>
+      </div>
+    </header>
+
+    <section class="section" id="scope">
+      <p class="kicker">Scope</p>
+      <h2 class="section-title">対応範囲</h2>
+      <ul class="scope-list">
+        <li>LP デザイン / HTML・CSS コーディング</li>
+        <li>Figma 納品 / 既存ページ改善・差分展開</li>
+        <li>SP 最適化 / 余白・レイアウト設計</li>
+        <li>医療・情報量多めページの整理</li>
+        <li>継続運用・改善案件（たたき台から一緒に詰める進め方に慣れています）</li>
+      </ul>
+    </section>
+
+    <section class="section" id="works">
+      <p class="kicker">Works</p>
+      <h2 class="section-title">実績</h2>
+      <article class="work-card">
+        <div class="work-head">
+          <h3 class="work-title">Stillwater — 訪問看護 LP（デモ）</h3>
+          <span class="work-tag">LPコーディング</span>
+        </div>
+        <p class="work-copy">
+          医療系サービスの LP をゼロから実装したデモ。情報量が多い案件でも読む順番を設計し、迷いなく CTA へ辿り着ける構成にしています。
+          ライトテーマ・SP 最適化・FAQ アコーディオン・フォームまで含む標準構成。
+        </p>
+        <ul class="work-meta">
+          <li><span>スタック</span>HTML / CSS / Vercel</li>
+          <li><span>担当</span>構成設計 / コーディング / SP最適化</li>
+        </ul>
+        <div class="work-actions">
+          <a class="primary-button" href="https://lp-demo-shizuku.vercel.app" target="_blank" rel="noopener">デモを見る</a>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-head">
+          <h3 class="work-title">押印 — 推し活観測ログ</h3>
+          <span class="work-tag">個人プロダクト</span>
+        </div>
+        <p class="work-copy">
+          推し活の記録を静かに積み上げるダークモード専用ログブック。
+          Vanilla JS + localStorage のみで、オフラインでも動く軽量構成。
+          CSS変数によるトークン設計でメンバーごとに配色が動的に変わる仕組みを実装しています。
+        </p>
+        <ul class="work-meta">
+          <li><span>スタック</span>HTML / CSS / JavaScript / Vercel</li>
+          <li><span>担当</span>UI設計 / コーディング / デプロイ</li>
+        </ul>
+        <div class="work-actions">
+          <a class="primary-button" href="{{OSHI_LOG_URL}}" target="_blank" rel="noopener">デモを見る</a>
+          <a class="ghost-button" href="{{OSHI_LOG_REPO}}" target="_blank" rel="noopener">コードを見る</a>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-head">
+          <h3 class="work-title">Lumière — エステサロン LP（デモ）</h3>
+          <span class="work-tag">LPコーディング</span>
+        </div>
+        <p class="work-copy">
+          美容・エステ系サービスの LP デモ。明朝体 + アースカラートーンで品のある世界観を設計。
+          コンセプト3カード・メニュー一覧・予約フォームまで含む標準構成。SP最適化済み。
+        </p>
+        <ul class="work-meta">
+          <li><span>スタック</span>HTML / CSS / Vercel</li>
+          <li><span>担当</span>デザイン / コーディング / SP最適化</li>
+        </ul>
+        <div class="work-actions">
+          <a class="primary-button" href="https://salon-demo-shizuku.vercel.app" target="_blank" rel="noopener">デモを見る</a>
+        </div>
+      </article>
+
+      <article class="work-card">
+        <div class="work-head">
+          <h3 class="work-title">バナー制作サンプル — 4サイズ</h3>
+          <span class="work-tag">バナー制作</span>
+        </div>
+        <p class="work-copy">
+          728×90 / 300×250 / 320×50（SP）/ 160×600 の4サイズを HTML・CSS のみで制作したデモ。
+          実案件では Figma データから各サイズを書き出し、PNG / SVG 納品にも対応しています。
+        </p>
+        <ul class="work-meta">
+          <li><span>スタック</span>HTML / CSS / Vercel</li>
+          <li><span>担当</span>デザイン / コーディング / マルチサイズ展開</li>
+        </ul>
+        <div class="work-actions">
+          <a class="primary-button" href="https://banner-demo-shizuku.vercel.app" target="_blank" rel="noopener">デモを見る</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="stance">
+      <p class="kicker">Stance</p>
+      <h2 class="section-title">仕事の進め方</h2>
+      <ul class="stance-list">
+        <li>「なぜそうしたか」を説明できる形で設計・実装する</li>
+        <li>対応範囲を事前に箇条書きで明示する（判断コストを減らす）</li>
+        <li>熱量は抑えめ・落ち着いたトーンでやり取りする</li>
+        <li>たたき台から一緒に詰める進め方に慣れている</li>
+      </ul>
+    </section>
+
+    <section class="section" id="contact">
+      <p class="kicker">Contact</p>
+      <h2 class="section-title">ご依頼・ご相談</h2>
+      <p class="contact-copy">
+        初回のやり取りは以下のいずれかからどうぞ。内容を確認後、対応可否と概算をお返しします。
+      </p>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">CrowdWorks</span>
+          <span class="contact-text">「しずく」で検索、またはプロフィールURLをお問い合わせください</span>
+        </li>
+        <li>
+          <span class="contact-label">Lancers</span>
+          <span class="contact-text">「しずく」で検索、またはプロフィールURLをお問い合わせください</span>
+        </li>
+        <li>
+          <span class="contact-label">GitHub</span>
+          <a href="{{GITHUB_URL}}" target="_blank" rel="noopener">実装サンプルを見る →</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>© しずく — UI / Coding / Automation</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const targets = document.querySelectorAll(
+        '.hero, .section, .work-card, .scope-list li, .stance-list li'
+      );
+      if (!window.IntersectionObserver) {
+        targets.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      const io = new IntersectionObserver(
+        entries => entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        }),
+        { threshold: 0.12 }
+      );
+      targets.forEach(el => io.observe(el));
+    })();
+  </script>
+</body>
+</html>
