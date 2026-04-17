@@ -216,6 +216,29 @@ a {
   flex-wrap: wrap;
 }
 
+.case-block {
+  margin: 16px 0;
+  padding: 16px 18px;
+  border-left: 2px solid var(--accent-color);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0 12px 12px 0;
+}
+
+.case-label {
+  margin: 0 0 6px;
+  color: var(--accent-color);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.case-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .contact-copy {
   margin: 0 0 24px;
   color: var(--muted);
